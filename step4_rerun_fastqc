@@ -1,0 +1,3 @@
+foreach y (*.fastq.gz)
+/usr/local/fastqc/fastqc -o fastqc_output $y
+end

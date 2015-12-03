@@ -1,0 +1,6 @@
+bowtie-build Smel_2011_NC_020527_pSymA.fa Smel_2011_NC_020527_pSymA
+bowtie-build Smel_2011_NC_020528_chrom.fa Smel_2011_NC_020528_chrom
+bowtie-build Smel_2011_NC_020560_pSymB.fa Smel_2011_NC_020560_pSymB
+samtools faidx Smel_2011_NC_020527_pSymA.fa
+samtools faidx Smel_2011_NC_020528_chrom.fa
+samtools faidx Smel_2011_NC_020560_pSymB.fa
