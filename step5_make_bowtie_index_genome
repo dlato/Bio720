@@ -1,0 +1,2 @@
+bowtie-build Smel_2011_genome.fa Smel_2011_genome
+samtools faidx Smel_2011_genome.fa

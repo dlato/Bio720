@@ -1,0 +1,30 @@
+reference=/home/dlato/Documents/bio720/final_project_finan/ref_seqs_Smel2011/Smel_2011_genome
+annotation=/home/dlato/Documents/bio720/final_project_finan/ref_seqs_Smel2011/Smel_2011_genome.gff3
+samples[1]=10_TAATGCGC-ATAGAGGC_L001_R1_001_trimed
+samples[2]=10_TAATGCGC-ATAGAGGC_L002_R1_001_trimed
+samples[3]=1_CTGAAGCT-TATAGCCT_L001_R1_trimed
+samples[4]=1_CTGAAGCT-TATAGCCT_L002_R1_trimed
+samples[5]=2_CTGAAGCT-ATAGAGGC_L001_R1_002_trimed
+samples[6]=2_CTGAAGCT-ATAGAGGC_L002_R1_001_trimed
+samples[7]=4_CTGAAGCT-GGCTCTGA_L001_R1_001_trimed
+samples[8]=4_CTGAAGCT-GGCTCTGA_L002_R1_001_trimed
+samples[9]=5_CTGAAGCT-AGGCGAAG_L001_R1_001_trimed
+samples[10]=5_CTGAAGCT-AGGCGAAG_L002_R1_001_trimed
+samples[11]=6_CTGAAGCT-TAATCTTA_L001_R1_002_trimed
+samples[12]=6_CTGAAGCT-TAATCTTA_L002_R1_002_trimed
+samples[13]=7_CTGAAGCT-CAGGACGT_L001_R1_001_trimed
+samples[14]=7_CTGAAGCT-CAGGACGT_L002_R1_001_trimed
+samples[15]=9_TAATGCGC-TATAGCCT_L001_R1_002_trimed
+samples[16]=9_TAATGCGC-TATAGCCT_L002_R1_002_trimed
+
+for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+do
+    sample=${samples[${i}]}
+    echo ${sample}
+    #Map the reads
+    /usr/local/tophat-2.0.8/tophat -p 15 -G ${annotation} -o /home/dlato/Documents/bio720/final_project_finan/tophat_out/genome/${sample} ${reference} \
+     /home/dlato/Documents/bio720/final_project_finan/trimed_data/${sample}.fastq.gz \
+
+    #Count the number of reads mapping to each feature using HTSeq
+    htseq-count --format=bam --stranded=no --order=pos --type gene -i ID -m intersection-nonempty /home/dlato/Documents/bio720/final_project_finan/tophat_out/genome/${sample}/accepted_hits.bam ${annotation} > /home/dlato/Documents/bio720/final_project_finan/tophat_out/genome/counts/${sample}_htseq_counts.txt
+done
