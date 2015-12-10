@@ -26,5 +26,5 @@ do
      /home/dlato/Documents/bio720/final_project_finan/trimed_data/${sample}.fastq.gz \
 
     #Count the number of reads mapping to each feature using HTSeq
-    htseq-count --format=bam --stranded=no --order=pos --type gene -i ID -m intersection-nonempty /home/dlato/Documents/bio720/final_project_finan/tophat_out/genome/${sample}/accepted_hits.bam ${annotation} > /home/dlato/Documents/bio720/final_project_finan/tophat_out/genome/counts/${sample}_htseq_counts.txt
+    htseq-count --format=bam --stranded=no --order=pos --type gene -i Name -m intersection-nonempty /home/dlato/Documents/bio720/final_project_finan/tophat_out/genome/${sample}/accepted_hits.bam ${annotation} > /home/dlato/Documents/bio720/final_project_finan/tophat_out/genome/counts/${sample}_htseq_counts.txt
 done
