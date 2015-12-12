@@ -315,7 +315,7 @@ sink()
      
     plot(y = res_ab_b$log2FoldChange, x =log2(res_ab_b$baseMean) , 
          ylab = "log2 Fold Change", xlab = "Mean Expression",
-         main = "Missing Both Plasmids and Missing Plasmid B", pch = 20, col ="grey")
+         main = "Missing Both Plasmids v.s Missing Plasmid B", pch = 20, col ="grey")
     with(ab_b_dat[ab_b_dat$padj <0.05, ],
          points(y = log2FoldChange,x = log2(baseMean),
                 pch=20, col = "black" ))  
