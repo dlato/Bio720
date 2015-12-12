@@ -9,11 +9,11 @@ setwd("C:/Users/Daniella/Documents/Bio720/SinoFinalProject/countData/")
 in_dir = dir(, pattern=".txt")
 in_dir
 
-counts_in <- lapply(in_dir, function(x) read.table(x, header=F, sep = "", nrows=8257))
+counts_in <- lapply(in_dir, function(x) read.table(x, header=F, sep = "", nrows=8241))
 head(counts_in[[1]])
 head(counts_in[[3]])
 #make matrix of counts
-tot_count_matrix <- matrix(unlist(lapply(counts_in, function(x) x$V2)), nrow=8257, ncol=16)
+tot_count_matrix <- matrix(unlist(lapply(counts_in, function(x) x$V2)), nrow=8241, ncol=16)
 
 head(tot_count_matrix)
 #setting up experimental design object
@@ -52,7 +52,7 @@ test_lane_effects2 <- DESeq(test_lane_effects) # We know fit the simple model
 test_lane_effects2_results <- results(test_lane_effects2)
 summary(test_lane_effects2_results) # No evidence, but this is a bit incomplete
 
-plotDispEsts(test_lane_effects2)
+plotDispEsts(test_lane_effects2, xlab="Mean of Normalized Counts", ylab="Dispersion", main="Mean Dispersion for Lane Effect")
 
 for_pca <- rlog(test_lane_effects2, blind=TRUE)
 plotPCA(for_pca, intgroup=c("lane")) # no obvious lane effects.
