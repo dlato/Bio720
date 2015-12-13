@@ -1,0 +1,62 @@
+echo "grep "SM2011_c" de_genes_wt_ab.txt      | wc -l"
+grep "SM2011_c" de_genes_wt_ab.txt      | wc -l
+echo "grep "SM2011_a" de_genes_wt_ab.txt      | wc -l"
+grep "SM2011_a" de_genes_wt_ab.txt      | wc -l
+echo "grep "SM2011_b" de_genes_wt_ab.txt      | wc -l"
+grep "SM2011_b" de_genes_wt_ab.txt      | wc -l
+
+echo "grep "SM2011_c" de_genes_wt_a.txt       | wc -l"
+grep "SM2011_c" de_genes_wt_a.txt       | wc -l
+echo "grep "SM2011_a" de_genes_wt_a.txt       | wc -l"
+grep "SM2011_a" de_genes_wt_a.txt       | wc -l
+echo "grep "SM2011_b" de_genes_wt_a.txt       | wc -l"
+grep "SM2011_b" de_genes_wt_a.txt       | wc -l
+
+echo "grep "SM2011_c" de_genes_wt_b.txt       | wc -l"
+grep "SM2011_c" de_genes_wt_b.txt       | wc -l
+echo "grep "SM2011_a" de_genes_wt_b.txt       | wc -l"
+grep "SM2011_a" de_genes_wt_b.txt       | wc -l
+echo "grep "SM2011_b" de_genes_wt_b.txt       | wc -l"
+grep "SM2011_b" de_genes_wt_b.txt       | wc -l
+
+echo "grep "SM2011_c" wt_ab_downreg_genes.txt | wc -l"
+grep "SM2011_c" wt_ab_downreg_genes.txt | wc -l
+echo "grep "SM2011_a" wt_ab_downreg_genes.txt | wc -l"
+grep "SM2011_a" wt_ab_downreg_genes.txt | wc -l
+echo "grep "SM2011_b" wt_ab_downreg_genes.txt | wc -l"
+grep "SM2011_b" wt_ab_downreg_genes.txt | wc -l
+
+echo "grep "SM2011_c" wt_ab_upreg_genes.txt   | wc -l"
+grep "SM2011_c" wt_ab_upreg_genes.txt   | wc -l
+echo "grep "SM2011_a" wt_ab_upreg_genes.txt   | wc -l"
+grep "SM2011_a" wt_ab_upreg_genes.txt   | wc -l
+echo "grep "SM2011_b" wt_ab_upreg_genes.txt   | wc -l"
+grep "SM2011_b" wt_ab_upreg_genes.txt   | wc -l
+
+echo "grep "SM2011_c" wt_a_downreg_genes.txt  | wc -l"
+grep "SM2011_c" wt_a_downreg_genes.txt  | wc -l
+echo "grep "SM2011_a" wt_a_downreg_genes.txt  | wc -l"
+grep "SM2011_a" wt_a_downreg_genes.txt  | wc -l
+echo "grep "SM2011_b" wt_a_downreg_genes.txt  | wc -l"
+grep "SM2011_b" wt_a_downreg_genes.txt  | wc -l
+
+echo "grep "SM2011_c" wt_a_upreg_genes.txt    | wc -l"
+grep "SM2011_c" wt_a_upreg_genes.txt    | wc -l
+echo "grep "SM2011_a" wt_a_upreg_genes.txt    | wc -l"
+grep "SM2011_a" wt_a_upreg_genes.txt    | wc -l
+echo "grep "SM2011_b" wt_a_upreg_genes.txt    | wc -l"
+grep "SM2011_b" wt_a_upreg_genes.txt    | wc -l
+
+echo "grep "SM2011_c" wt_b_downreg_genes.txt  | wc -l"
+grep "SM2011_c" wt_b_downreg_genes.txt  | wc -l
+echo "grep "SM2011_a" wt_b_downreg_genes.txt  | wc -l"
+grep "SM2011_a" wt_b_downreg_genes.txt  | wc -l
+echo "grep "SM2011_b" wt_b_downreg_genes.txt  | wc -l"
+grep "SM2011_b" wt_b_downreg_genes.txt  | wc -l
+
+echo "grep "SM2011_c" wt_b_upreg_genes.txt    | wc -l"
+grep "SM2011_c" wt_b_upreg_genes.txt    | wc -l
+echo "grep "SM2011_a" wt_b_upreg_genes.txt    | wc -l"
+grep "SM2011_a" wt_b_upreg_genes.txt    | wc -l
+echo "grep "SM2011_b" wt_b_upreg_genes.txt    | wc -l"
+grep "SM2011_b" wt_b_upreg_genes.txt    | wc -l
